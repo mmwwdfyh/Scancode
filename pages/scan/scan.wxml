@@ -1,0 +1,25 @@
+<!--pages/scan/scan.wxml-->
+<view class="wrap">
+  <!-- 轮播图 -->
+  <swiper class="wrap_swiper" autoplay circular indicator-dots indicator-active-color="#ffffff">
+    <swiper-item>
+      <image src="../../images/66934edbb65bbf99-cd021ba4a3f1b561-ab617220dbc4218de5ec20e964a0551b.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/微信图片_2019092216485554.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/微信图片_2019092216485555.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 扫码购物 -->
+  <view>
+    <view class="wrap_barcode">
+      <view class="barcode" bindtap="herdcode">
+        <image src="../../images/qrcode.png"></image>
+        <text>请扫描商品</text>
+        <text>条形码</text>
+      </view>
+    </view>
+  </view>
+</view>

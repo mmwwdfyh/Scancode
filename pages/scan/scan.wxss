@@ -1,0 +1,37 @@
+/* pages/scan/scan.wxss */
+.wrap_swiper{
+  width: 100%;
+  height: 40vw;
+}
+.wrap_swiper image{
+  width: 100%;
+  height: 100%;
+}
+.barcode{
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  background-color: #F5BA47;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 26rpx;
+  z-index: 999;
+}
+.barcode image{
+  width: 55%;
+  height: 55%;
+  margin-top: 18rpx;
+}
+
+.wrap_barcode{
+  width: 41vw;
+  /* height: 34vw; */
+  border-radius: 50%;
+  background-color: #FCE9BC;
+  margin:10vw auto;
+  padding: 2vw;
+}

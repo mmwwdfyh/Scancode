@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/scan/scan",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/ption/ption",
+    "pages/personal/personal",
+    "pages/goods/goods",
+    "pages/settlement/settlement"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/scan/scan",
+        "text": "扫码购物",
+        "iconPath": "/images/index02.png",
+        "selectedIconPath": "/images/index01.png"
+      },
+      {
+        "pagePath": "pages/ption/ption",
+        "text": "每日优选",
+        "iconPath": "/images/product02.png",
+        "selectedIconPath": "/images/product01.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "/images/user02.png",
+        "selectedIconPath": "/images/user01.png"
+      }
+    ]
+  }
+}

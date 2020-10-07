@@ -1,0 +1,21 @@
+<!--pages/ption/ption.wxml-->
+<view class="ption">
+  <view class="ption_pin" wx:for="{{ptionlist}}" wx:key="index"> 
+    <view class="nong">{{item.description}}</view>
+    <view class="guigg">{{item.title}}</view>
+    <view class="jiage">￥{{item.price}}</view>
+    <view class="shuliang">
+      <view bindtap="headershu" data-id="{{item._id}}" data-operation="{{-1}}">-</view>
+      <view>{{item.num}}</view>
+      <view bindtap="headershu" data-id="{{item._id}}" data-operation="{{1}}">+</view>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="bootm">
+        <view class="zongji">总计：￥{{totalPrice}}</view>
+        <view class="boomtitle">
+          <view class="jixun" bindtap="headeryes">继续添加</view>
+          <view class="jiesuan" bindtap="headerset">去结算({{totalNum}})</view>
+        </view>
+  </view>
+</view>
