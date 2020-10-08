@@ -6,7 +6,13 @@
     "pages/ption/ption",
     "pages/personal/personal",
     "pages/goods/goods",
-    "pages/settlement/settlement"
+    "pages/settlement/settlement",
+    "pages/pay/pay",
+    "pages/paygood/paygood",
+    "pages/Mywallet/Mywallet",
+    "pages/order/order",
+    "pages/Preferred/Preferred",
+    "pages/address/address"
   ],
   "window": {
     "backgroundTextStyle": "light",

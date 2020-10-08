@@ -1,0 +1,21 @@
+<!--pages/paygood/paygood.wxml-->
+<view class="paygood">
+  <view class="title">
+    <icon class="icon-box-img" type="success" size="50"></icon>
+    <text>支付成功</text>
+  </view>
+  <navigator class="home" url="/pages/scan/scan">
+    返回首页
+  </navigator>
+  <view class="lvke">你可能喜欢</view>
+</view>
+<view class="toom">
+  <image src="../../images/00.png"></image>
+  <view>海南现摘芒果</view>
+  <view>￥29.9</view>
+  <view>销量:201件</view>
+  <view class="lijin">立即够买</view>
+</view>
+<view>
+  <image src="../../images/02.png"></image>
+</view>

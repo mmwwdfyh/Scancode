@@ -1,5 +1,7 @@
 // pages/ption/ption.js
 import { home } from '../../model/home'
+import { getScode } from '../../utils/axyncWx'
+
 const homedata = new home()
 Page({
 
@@ -12,7 +14,6 @@ Page({
     totalPrice: 0,
     totalNum: 0
   },
-
   // 商品加减
   headershu(e) {
     // console.log(e)
@@ -23,6 +24,7 @@ Page({
     let then = this
     // 找到需要修改的商品的索引
     const index = ptionlist.findIndex(v => v._id === id)
+    console.log(index)
     // 判断小于1是否删除
     if (ptionlist[index].num === 1 && operation === -1) {
       // 弹框提示
@@ -53,10 +55,8 @@ Page({
     let totalNum = 0
 
     ptionlist.forEach(v => {
-      if (v.checked) {
-        totalPrice += v.num * v.price;
-        totalNum += v.num
-      }
+      totalPrice += v.num * v.price;
+      totalNum += v.num
       // 把购物车数据重新设置回data中和缓存中
       this.setData({
         ptionlist,
@@ -68,42 +68,39 @@ Page({
   },
 
   // 继续添加
-  headeryes() {
-    console.log(111)
+  async headeryes() {
+    let res = await getScode()
+    console.log(res)
     // 允许从相机和相册扫码
-    wx.scanCode({
-      success(res) {
-        console.log(res)
-        homedata.getsao(res.result).then(res => {
-          console.log(res)
-          // 获取本地缓存的数据
-          let cart = wx.getStorageSync("data") || [];
-          // console.log(cart)
-          // 判断对象是否在购物车数据中
-          let index = cart.findIndex(v => v._id === res.data.result[0]._id)
-          console.log(index)
-          if (index === -1) {
-            // 不存在第一次添加
-            res.data.result[0].num = 1
-            res.data.result[0].checked = true
-            cart.push(res.data.result[0])
-          } else {
-            // 已经存在执行++
-            cart[index].num++
-          }
-          // 把购物车重新添加到缓存中
-          wx.setStorageSync('data', cart)
-          // 弹框提示
-          wx.showToast({
-            title: '加入成功',
-            icon: 'success',
-            // true 防止用户 手抖 疯狂点击按钮
-            mask: true,
-          })
-
-        })
+    homedata.getsao(res.result).then(res => {
+      console.log(res)
+      // 获取本地缓存的数据
+      let cart = wx.getStorageSync("data") || [];
+      // console.log(cart)
+      // 判断对象是否在购物车数据中
+      let index = cart.findIndex(v => v._id === res.data.result[0]._id)
+      console.log(index)
+      if (index === -1) {
+        // 不存在第一次添加
+        res.data.result[0].num = 1
+        res.data.result[0].checked = true
+        cart.push(res.data.result[0])
+      } else {
+        // 已经存在执行++
+        cart[index].num++
       }
+      // 把购物车重新添加到缓存中
+      wx.setStorageSync('data', cart)
+      // 弹框提示
+      wx.showToast({
+        title: '加入成功',
+        icon: 'success',
+        // true 防止用户 手抖 疯狂点击按钮
+        mask: true,
+      })
+
     })
+
   },
   // 去结算
   headerset() {
@@ -132,7 +129,6 @@ Page({
     let ptionlist = wx.getStorageSync('data')
     console.log(ptionlist)
     this.setCart(ptionlist)   //添加商品选中价格
-
   },
 
   /**

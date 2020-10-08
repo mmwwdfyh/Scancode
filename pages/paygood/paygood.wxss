@@ -1,0 +1,57 @@
+/* pages/paygood/paygood.wxss */
+.paygood{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75vw;
+  align-items: center;
+  background-color: #dddddd;
+}
+.title{
+  display: flex;
+  flex-direction: column; 
+   text-align: center;
+}
+.home{
+  padding: 2vw 6vw;
+  background-color: #FFA72B;
+  color: #ffffff;
+  border-radius: 10rpx;
+}
+.lvke{
+  background-color: #ffffff;
+  height: 10vw;
+  line-height: 10vw;
+  width: 100%;
+  text-align: center;
+}
+image{
+  width: 100%;
+  height: 50vw;
+}
+.toom{
+  position: relative;   
+  background-color: #ffffff;
+  margin-bottom: 10vw;
+}
+.toom view:nth-of-type(1){
+  color: #ccc;
+  margin: 10rpx 0;
+}
+.toom view:nth-of-type(2){
+  color: red;
+  font-size: 50rpx;
+}
+.toom view:nth-of-type(3){
+  color: #ccc;
+  margin-top: 10rpx;
+}
+.lijin{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1vw 3vw;
+  color: #ffffff;
+  background-color: red;
+  border-radius: 10rpx;
+}

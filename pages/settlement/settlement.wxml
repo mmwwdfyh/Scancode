@@ -1,4 +1,48 @@
 <!--pages/settlement/settlement.wxml-->
-<view class="">
-
+<view class="wrap">
+  <!-- 商品 -->
+  <view class="wrap_title" wx:for="{{setlist}}" wx:key="index">
+    <view class="shangpin">
+      <view>{{item.title}}</view>
+      <view>${{item.price}}</view>
+    </view>
+    <text class="shu">x{{item.num}}</text>
+  </view>
+  <!-- 共几件商品 -->
+  <view class="shangpinshu" bindtap="toogle">
+    <view>共{{lengths}}件商品{{len == 1 ? "展开" : "收起"}}</view>
+  </view>
+  <!-- 余额 -->
+  <view class="yue">
+    <view>余额 <text>($4)</text> </view>
+    <view class="hong">
+      <switch color="#FFA72B"></switch>
+    </view>
+  </view>
+  <!-- 商品金额 -->
+  <view class="yue">
+    <view>商品金额</view>
+    <view class="hong">
+      ￥15.5
+    </view>
+  </view>
+  <!-- 余额减扣 -->
+  <view class="yue">
+    <view>余额减扣</view>
+    <view class="hong">
+      -￥4
+    </view>
+  </view>
+  <view class="tishi">
+    <icon class="icon-box-img" type="info" size="20"></icon>
+    <text>请支付完成后携带商品</text> 
+  </view>
+  <!-- 付款 -->
+  <view class="footer">
+    <view>
+      <text>实际支付</text>
+      <text class="hong">￥{{totalPrice}}</text>
+    </view>
+    <navigator class="zhif" url="/pages/pay/pay">确认支付</navigator>
+  </view>
 </view>

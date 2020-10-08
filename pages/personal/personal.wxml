@@ -1,2 +1,58 @@
 <!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class="wrapuser">
+  <!-- 登录 -->
+  <view class="login">
+    <view class="tupian">
+      <view class="userinfo">
+        <button class="button" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo"
+          bindgetuserinfo="getUserInfo">
+        </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <!-- <text class="userinfo-nickname"></text> -->
+        </block>
+      </view>
+      <view class="good">
+        <text>{{userInfo.nickName}}</text>
+        <text>账户余额：4元</text>
+      </view>
+    </view>
+  </view>
+  <!-- 我的钱包 -->
+  <navigator url="../Mywallet/Mywallet" class="wallet">
+    <image src="../../images/user/money.png"></image>
+    我的钱包
+    <!-- 定位 -->
+    <view class="dingwei">冲就送</view>
+  </navigator>
+
+  <!-- 微店订单 -->
+  <navigator class="wallet1" url="../order/order">
+    <image src="../../images/user/shop_order.png"></image>
+    微店订单
+  </navigator>
+  <!-- 优选订单 -->
+  <navigator class="wallet2" url="../Preferred/Preferred">
+    <image src="../../images/user/online_order.png"></image>
+    优选订单
+  </navigator>
+  <!-- 地址管理 -->
+  <navigator class="wallet3" bindtap="address">
+    <image src="../../images/user/address.png"></image>
+    地址管理
+  </navigator>
+  <!-- 联系客服 -->
+  <view class="wallet4">
+    <button class="buttonn" open-type="contact">
+      <image src="../../images/user/tel.png"></image>
+      联系客服
+    </button>
+  </view>
+  <!-- 意见反馈 -->
+  <view class="wallet5">
+    <button class="buttonn"  open-type="feedback">
+      <image src="../../images/user/feedback.png"></image>
+      意见反馈
+    </button>
+  </view>
+</view>

@@ -38,9 +38,11 @@ Page({
           }
         }
       })
-    } 
-    // 进行修改数量
+    } else{
+          // 进行修改数量
     ptionlist[index].num += operation
+    }
+
     // 设置回缓存和data中
     this.setCart(ptionlist)
   },
