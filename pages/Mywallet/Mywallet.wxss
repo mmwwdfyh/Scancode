@@ -1,1 +1,83 @@
 /* pages/Mywallet/Mywallet.wxss */
+.wraper{
+  background-color: #F9F9F9;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.zhanghu {
+  width: 100%;
+  height: 45vw;
+  background-image: linear-gradient(to bottom, #F5BB4A, #FBE0A7);
+  display: flex;
+  position: relative;
+}
+
+.image image {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  margin: 4vw;
+}
+
+.zhang_title {
+  margin: 4vw 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.jiage {
+  color: red;
+  font-size: 56rpx;
+}
+
+.mingxi {
+  width: 24vw;
+  height: 5vw;
+  border: 1rpx solid red;
+  line-height: 5vw;
+  text-align: center;
+  position: absolute;
+  bottom: 2vw;
+  left: 40%;
+  font-size: 24rpx;
+}
+.fh_jine{
+  margin-left: 5vw;
+}
+.chongzhi{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.chongzhi .fyhzhy{
+  width: 40%;
+  height: 15vw;
+  background-color: #FEFEEE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+}
+#active{
+  background-color: #FF0000;
+  z-index: 11;
+}
+.footer{
+  background-color: #ffffff;
+  margin-top: 2vw;
+}
+.chongzhi{
+  margin-top: 10rpx;
+}
+.footer_chongzhi{
+  width: 80vw;
+  height: 10vw;
+  line-height: 10vw;
+  text-align: center;
+  background-color: #F5BA47;
+  margin-top: 20vw;
+  margin-left: 10vw;
+  color: #ffffff;
+}

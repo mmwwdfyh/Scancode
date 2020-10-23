@@ -1,4 +1,5 @@
 <!--pages/ption/ption.wxml-->
+<!-- 购物页面 -->
 <view class="ption">
   <view class="ption_pin" wx:for="{{ptionlist}}" wx:key="index">
     <view class="nong">{{item.description}}</view>

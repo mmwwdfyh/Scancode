@@ -1,4 +1,5 @@
 <!--pages/personal/personal.wxml-->
+<!-- 个人主页 -->
 <view class="wrapuser">
   <!-- 登录 -->
   <view class="login">
@@ -9,7 +10,7 @@
         </button>
         <block wx:else>
           <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-          <!-- <text class="userinfo-nickname"></text> -->
+          <!-- <text class="userinfo-nickname">未登录</text> -->
         </block>
       </view>
       <view class="good">

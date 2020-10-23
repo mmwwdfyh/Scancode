@@ -1,2 +1,40 @@
 <!--pages/Mywallet/Mywallet.wxml-->
-<text>我的钱包</text>
+<view class="wraper">
+  <!-- 余额 -->
+  <view class="zhanghu">
+    <view class="image">
+      <image src="../../images\/user/gold.png"></image>
+    </view>
+    <view class="zhang_title">
+      <view>账户余额</view>
+      <view class="jiage">￥4元</view>
+    </view>
+    <!-- 查看余额明细 -->
+    <view class="mingxi">查看余额明细</view>
+  </view>
+  <!-- 充值金额 -->
+  <view>
+    <view class="footer">
+      <view class="fh_jine">充值金额</view>
+      <view class="chongzhi"> 
+        <view class="fyhzhy" id="active">
+          <view>0.1</view>
+          <view>冲10元送1元</view>
+        </view>
+        <view class="fyhzhy">
+          <view>20</view>
+          <view>冲20元送2元</view>
+        </view>
+        <view class="fyhzhy">
+          <view>50</view>
+          <view>冲50元送5元</view>
+        </view>
+        <view class="fyhzhy">
+          <view>100</view>
+          <view>冲100元送10元</view>
+        </view>
+      </view>
+    </view>
+    <navigator url="../record/record" class="footer_chongzhi">去充值</navigator>
+  </view>
+</view>

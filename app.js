@@ -1,4 +1,6 @@
 //app.js
+import { open } from "./model/open"
+const openzhy = new open()
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -15,7 +17,11 @@ App({
     // 获取用户信息
     wx.getSetting({
       success: res => {
+        console.log(res)
         if (res.authSetting['scope.userInfo']) {
+          wx.switchTab({
+            url: '/pages/scan/scan',
+          })
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
@@ -29,9 +35,26 @@ App({
               }
             }
           })
+        } else {
+          // wx.navigateTo({
+          //   url: '/pages/authorization/authorization',
+          // })
         }
       }
     })
+
+    // 支付功能
+    // wx.login({
+    //   success: res => {
+    //     openzhy.getOpen(res.code).then(res => {
+    //       console.log(res)
+    //       wx.setStorageSync('userCode', res.data.userinfo)
+    //     })
+    //   }
+    // })
+
+
+
   },
   globalData: {
     userInfo: null

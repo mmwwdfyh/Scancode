@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/authorization/authorization",
     "pages/scan/scan",
     "pages/index/index",
     "pages/logs/logs",
@@ -12,7 +13,8 @@
     "pages/Mywallet/Mywallet",
     "pages/order/order",
     "pages/Preferred/Preferred",
-    "pages/address/address"
+    "pages/address/address",
+    "pages/record/record"
   ],
   "window": {
     "backgroundTextStyle": "light",

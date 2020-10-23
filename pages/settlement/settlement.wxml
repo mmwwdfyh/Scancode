@@ -1,4 +1,5 @@
 <!--pages/settlement/settlement.wxml-->
+<!-- 确认订单 -->
 <view class="wrap">
   <!-- 商品 -->
   <view class="wrap_title" wx:for="{{setlist}}" wx:key="index">
@@ -16,7 +17,7 @@
   <view class="yue">
     <view>余额 <text>($4)</text> </view>
     <view class="hong">
-      <switch color="#FFA72B"></switch>
+      <switch color="#FFA72B" bindtap="HeaderSwitch" data-id="id"></switch>
     </view>
   </view>
   <!-- 商品金额 -->
@@ -43,6 +44,6 @@
       <text>实际支付</text>
       <text class="hong">￥{{totalPrice}}</text>
     </view>
-    <navigator class="zhif" url="/pages/pay/pay">确认支付</navigator>
+    <navigator class="zhif" bindtap="yespay">确认支付</navigator>
   </view>
 </view>

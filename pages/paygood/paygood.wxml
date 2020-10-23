@@ -1,4 +1,5 @@
 <!--pages/paygood/paygood.wxml-->
+<!-- 支付页面 -->
 <view class="paygood">
   <view class="title">
     <icon class="icon-box-img" type="success" size="50"></icon>

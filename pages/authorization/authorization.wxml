@@ -1,0 +1,19 @@
+<!--pages/authorization/authorization.wxml-->
+<view class="wraper">
+  <view class="wraper_user">
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view class="wraper_title">"为了更好的体验，我们需要您的微信授权"</view>
+  <view class="wraper_button">
+    <view>
+      <button class="buttonfyh" plain="true" open-type="getUserInfo"
+        bindgetuserinfo="getUserInfo">授权登录</button>
+      <!-- <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block> -->
+    </view>
+    <view>暂不登录</view>
+  </view>
+</view>

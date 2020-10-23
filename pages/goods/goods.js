@@ -91,6 +91,14 @@ Page({
       }
       // 把购物车重新添加到缓存中
       wx.setStorageSync('data', cart)
+
+        const cartlist = wx.getStorageSync('data')
+        if(cartlist){
+          this.setData({
+            ptionlist:cartlist
+          })
+        }
+
       // 弹框提示
       wx.showToast({
         title: '加入成功',
@@ -100,7 +108,9 @@ Page({
       })
 
     })
-
+    // wx.navigateTo({
+    //   url: '/pages/goods/goods',
+    // })
   },
   // 去结算
   headerset() {
@@ -108,10 +118,28 @@ Page({
       url: '/pages/settlement/settlement',
     })
   },
+
+  // 封装数据
+  data() {
+    let ptionlist = wx.getStorageSync('data')
+    console.log(ptionlist)
+    this.setData({
+      ptionlist
+    })
+    this.setCart(ptionlist)   //添加商品选中价格
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let ptionlist = wx.getStorageSync('data')
+    console.log(ptionlist)
+    if (ptionlist) {
+      this.setData({
+        ptionlist
+      })
+    }
+    this.setCart(ptionlist)   //添加商品选中价格
 
   },
 
@@ -128,7 +156,11 @@ Page({
   onShow: function () {
     let ptionlist = wx.getStorageSync('data')
     console.log(ptionlist)
+    this.setData({
+      ptionlist
+    })
     this.setCart(ptionlist)   //添加商品选中价格
+
   },
 
   /**

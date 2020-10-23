@@ -1,4 +1,5 @@
 <!--pages/pay/pay.wxml-->
+<!-- 支付 -->
 <functional-page-navigator
   version="develop"
   name="requestPayment"

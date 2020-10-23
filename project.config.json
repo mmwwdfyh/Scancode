@@ -117,6 +117,33 @@
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/Mywallet/Mywallet钱包",
+          "pathName": "pages/Mywallet/Mywallet",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/record/record充值记录",
+          "pathName": "pages/record/record",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/authorization/authorization授权登录",
+          "pathName": "pages/authorization/authorization",
+          "scene": null
         }
       ]
     }
